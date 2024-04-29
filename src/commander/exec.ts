@@ -9,6 +9,7 @@ import getGitInfo from '../tasks/getGitInfo.js';
 import createBuild from '../tasks/createBuild.js'
 import exec from '../tasks/exec.js'
 import finalizeBuild from '../tasks/finalizeBuild.js'
+import fetchResults from '../tasks/fetchResults.js'
 
 const command = new Command();
 
@@ -33,7 +34,8 @@ command
                 getGitInfo(ctx),
                 createBuild(ctx),
                 exec(ctx),
-                finalizeBuild(ctx)
+                finalizeBuild(ctx),
+                fetchResults(ctx)
             ],
             {
                 rendererOptions: {
